@@ -1,0 +1,16 @@
+[project]
+name = "coffeereports"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Beliy",email = "beliypozhizni@gmail.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "tabulate (>=0.10.0,<0.11.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
