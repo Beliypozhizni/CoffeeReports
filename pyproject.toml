@@ -25,3 +25,6 @@ dev = [
 minversion = "9.0.2"
 addopts = "--cov=coffee_reports"
 testpaths = ["tests"]
+
+[tool.poetry]
+package-mode = false
