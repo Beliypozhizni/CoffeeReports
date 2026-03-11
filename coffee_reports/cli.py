@@ -5,7 +5,7 @@ from typing import Sequence
 from tabulate import tabulate
 
 from coffee_reports.io import read_rows, InputError
-from coffee_reports.reports import available_reports, get_report
+from coffee_reports.reports import available_reports, get_report_builder
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         rows = read_rows(args.files)
-        builder = get_report(args.report)
+        builder = get_report_builder(args.report)
         report = builder.build(rows)
         print(render_report(report.headers, report.rows))
         return 0
